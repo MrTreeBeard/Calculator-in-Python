@@ -1,0 +1,109 @@
+Python Calculator - User Guide
+==============================
+
+1) Overview
+-----------
+This project is a console-based calculator written in Python.
+The application is split into separate files:
+
+- models.py: contains the Calculator class and all calculation methods.
+- main.py: starts the program, shows the menu, reads user input,
+  and calls methods from Calculator.
+- requirements.txt: lists dependencies (there are no external dependencies).
+
+The calculator supports:
+- Addition
+- Subtraction
+- Multiplication
+- Division
+- Percentage calculation
+- Power (exponentiation)
+- Root (n-th root)
+- Operation history
+
+
+2) How It Works
+---------------
+When you run main.py:
+1. A Calculator object is created.
+2. A menu is displayed in a loop.
+3. You choose an operation by entering a number.
+4. The program asks for required numeric input.
+5. The selected method is executed.
+6. The result is printed and stored in history.
+7. The loop continues until you choose Exit.
+
+The program uses:
+- while loop for continuous menu interaction
+- if/elif/else conditional logic for operation selection
+- input validation through ValueError handling
+
+
+3) Installation
+---------------
+Requirements:
+- Python 3.x
+
+Install dependencies (optional, for consistency):
+
+    pip install -r requirements.txt
+
+Note: This project uses only Python standard library.
+
+
+4) Running the Program
+----------------------
+From the project folder, run:
+
+    python3 main.py
+
+Then choose options from the menu:
+- 1 -> Add
+- 2 -> Subtract
+- 3 -> Multiply
+- 4 -> Divide
+- 5 -> Percentage
+- 6 -> Power
+- 7 -> Root
+- 8 -> Show history
+- 9 -> Exit
+
+
+5) Usage Examples
+-----------------
+A) Percentage
+- Choose: 5
+- Enter number: 200
+- Enter percent: 15
+- Result: 30.0 (15% of 200)
+
+B) Power
+- Choose: 6
+- Enter first number (base): 2
+- Enter second number (exponent): 8
+- Result: 256.0
+
+C) Root
+- Choose: 7
+- Enter number: 27
+- Enter root degree: 3
+- Result: 3.0
+
+D) History
+- Choose: 8
+- The program lists all previously executed operations.
+
+
+6) Error Handling
+-----------------
+The calculator reports clear errors for invalid operations, for example:
+- Division by zero is not allowed.
+- Root degree cannot be 0.
+- Even root of a negative number is not a real number.
+- Invalid menu option prompts user to try again.
+
+
+7) Notes
+--------
+- Root degree is entered as an integer.
+- You can perform unlimited calculations until you choose Exit.
